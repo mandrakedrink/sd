@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Skin Cancer Detection</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body class="text-center">
+				<form method="POST">
+					<input class="input_text" placeholder="PLEASE ENTER YOUR DREAM" name="text">
+					<input class="button8" value="SEND" type="submit">
+				</form>
+      <br>
+      {% if imagelist %}
+               {% for url in imagelist %}
+                    <img src="{{ url_for('static',filename=url) }}"/>
+{% endfor %}
+      {%endif%}
+    </form>
+  </body>
+</html>
